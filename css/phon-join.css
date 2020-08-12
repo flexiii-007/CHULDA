@@ -1,0 +1,88 @@
+
+/* start phone css */
+
+@media (max-width:750px){
+    
+    .box-menu{  
+        width: 22em;
+        height: 10em;
+        top: 33%;
+    }
+    .pic-menu {
+        width: 22em;
+        height: 10em;    
+        top: 33%;
+        border-radius: 35px;
+    }
+    .pic-menu  img{ 
+        width: 45px;
+        height: 45px;
+        margin: auto;
+        border-radius: 25px; 
+    }
+     header .header-logo img{
+        width: 150px;
+        margin-top: 2em;
+    }
+    section{
+        width: auto;
+    }
+    section form .profile-pic .col-pic{
+        width: 60%;
+    }
+    section form .profile-pic .col-pic .dwara{
+        width: 5em;
+        height: 5em;
+    }
+    section form .profile-pic .col-pic svg{
+        width: 1.5em;
+        right: 25px;  
+    }
+    .title-form img{
+       width: 4em;
+       
+    }
+    section form .inputs .input1{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-self: center;
+        
+    }
+    section form .inputs .input2{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-self: center;
+        
+    }
+     section form .inputs input{
+        width: 25em;
+        height: 4em;
+        font-size: 12px ;
+        margin: 0;
+    }
+    
+/* start pin */
+section form .inputs  .pin h2{
+    font-size: 13px;
+}
+
+/* end pin */
+    section form .btn button{
+        width: 9em;
+        height: 3em;
+        font-size: 15px ;
+        transition: ease-out .1s;
+    }
+    section form .btn button:active{
+        transform: scale(.9);
+    }
+
+    footer{
+        font-size: 12px;
+        text-align: center;
+        margin: 3em 3em ;
+        
+    }
+}

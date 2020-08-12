@@ -1,0 +1,56 @@
+.preload-page{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #1E1200;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.preload-page .loading h1{
+    font-family: c-ul;
+    color: white;
+    /* animation: color-change 1s linear infinite alternate both; */
+
+}
+/* @keyframes color-change {
+    0% {
+      opacity: .5;
+    }
+    100% {
+      opacity: 1;
+    }
+  } */
+.preload-page .loading svg{
+    animation: logo 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate both;
+}
+@keyframes logo {
+    0% {
+              transform: translateZ(80px);
+              transform: scale(.7);
+      opacity: 0;
+    }
+    50%{
+        transform: scale(.9);
+    }
+    100% {
+      
+              transform: translateZ(0);
+              transform: scale(.8);
+      opacity: 1;
+    }
+  }
+
+  @media (max-width:600px){
+    .preload-page .loading svg{
+      width: 100px;
+      height: 100px;
+
+    }
+    .preload-page .loading h1{
+      font-size: 20px;
+    }
+  }

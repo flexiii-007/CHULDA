@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.blur{
+    position: absolute;
+    background-color: gray;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    filter: blur(55px);
+    display: none;
+    z-index: 2;
+}
+.box-menu{
+    position: absolute;
+      width: 700px;
+    height: 350px;
+    align-self: center;
+    top: 43%;
+    display: none;
+    z-index: 3;
+}
+.pic-menu {
+    position: absolute;
+    width: 700px;
+    height: 350px;
+    background: rgb(0, 0, 0, .8 );
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 45px;
+    
+    /* padding-left: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px; */
+}   
+    
+.pic-menu  img{ 
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 15%;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: url(../img/Untitled-2.jpg) ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: back ease-out 3s infinite;
+}
+
+
+header{
+    height: 10%;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+}
+section{
+    height: 80%;
+    width: 600px;
+    align-self: center;
+    position: relative;
+}
+section form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;    
+
+}
+section form .profile-pic{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+section form .profile-pic .col-pic{
+    display: flex;
+    justify-content: center;
+    width: 45%;
+    position: relative;
+}
+section form .profile-pic .dwara{
+    width: 9em;
+     height: 9em;
+     background-color: rgba(255, 189, 0, 1);
+     border-radius: 50%;
+    z-index: 4;
+    
+}
+section form .profile-pic .dwara img{
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+section form .profile-pic .col-pic svg{
+    width: 2.2em;
+    position: absolute;
+    right: 1.5em;
+    transition: ease-in-out .2s;
+    z-index: 3;
+}
+/* switcher */
+section form .switcher{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+
+}
+section form .switcher p{
+    font-family: c-l;
+    color: white;
+    font-size: 23px;
+ }
+ 
+section form .switcher .switch{
+    background: rgb(255, 77, 77);
+    width: 50px;
+    height: 25px;
+    align-self: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transform: translateX(0);
+    transition:  ease-in .2s;
+}
+
+section form .switcher .switch div{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(243, 243, 243);
+    box-shadow: 0 0.1em 0.3em rgba(0,0,0,0.3);
+    transition: ease-in .13s;
+} 
+section form .switcher .switch.checked{
+    background: #4cd964;
+}
+section form .switcher .switch div.checked{
+    transform: translateX(30px);
+}
+/* end switcher */
+section form .title-form{
+    color: white;
+    font-family: c-ul;
+    
+    
+    margin-top: 1em;
+}
+section form .inputs{
+    display: flex;
+    flex-direction: column;
+}
+section form .inputs input{
+    outline: none;
+    text-align: left;
+    padding-left: 1em;
+    background: rgb(124, 124, 124 , .2);
+    color: white;
+    width: 26em;
+    height: 55px;
+    border-radius: 50px;
+    border: none;
+    font-size: 15px;
+    font-family: c-l;
+    transition: ease-in-out .2s;
+    letter-spacing: 1px;
+}
+section form .inputs .input1{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    
+}
+section form .inputs .input2{
+    display: flex;
+    flex-direction: column;
+    align-self: center; 
+}
+/* start pin */
+section form .inputs  .pin {
+    height: 55px;
+    display: flex;
+}
+section form .inputs  .pin .insidpin{
+    position: relative;
+    height: 40px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
+section form .inputs  .pin h2{
+    align-self: center;
+    color: #ff8686ba;
+    font-family: c-ul;
+    font-size: 18px;
+    margin-left: 8px;
+}
+section form .inputs  .pin .insidpin svg{
+    position: absolute;
+    left: 6px;
+    width: 23px;
+    transition: all ease .2s;
+}
+ .pin-icon.active-icon{
+    transform: rotate(45deg);
+}
+.pin-icon2.active-icon{
+    transform: rotate(45deg);
+}
+  .pin-red.active-icon{
+    stroke: salmon;
+}
+
+section form .inputs  .pin input{
+    width: 35px;
+    height: 35px;
+    margin: 0;
+    text-align: center;
+    align-self: center;
+    
+}
+section form .inputs  .pin input.active-pin{
+    width: 100px;
+}
+/* end pin */
+section form .inputs input:focus{
+    background: rgb(124, 124, 124 , .1);
+    transform: scale(1.1);
+    border:solid .2px  rgba(255, 189, 0, 1);
+}
+section form .inputs input:active{
+    transform: scale(.95);
+}
+section form .btn button{
+    text-align: center;
+    background: rgba(255, 189, 0, 1);
+    width: 8em;
+    
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    letter-spacing: 2px;
+    font-size: 24px;
+    font-family: c-m;
+    margin-top: 1.5em;
+    transition: ease-in-out .3s;
+    outline: none;
+}
+section form .btn button:hover{
+    background: none;
+    color: white;
+    border: solid 1px rgba(255, 189, 0, 1);
+}
+section form .btn button:active{
+    transform: scale(.7);
+}
+footer{
+    height: 10%;
+    align-self: center;
+    display: flex;
+    align-items: center;
+
+}
+footer div p{
+   color: rgb(141, 141, 141);
+   font-family: c-l;
+   font-weight: 100;
+}
+
+::placeholder{
+    
+    opacity: .4px;
+}
+
+
+
+
+/* start classes for anims */
+
+section form .profile-pic .col-pic svg.close {
+    transform: rotate(45deg);
+}
+
+.red.close{
+    stroke: rgb(255, 63, 38);  
+
+}
+
+
+
+/* end classes for anims */
+

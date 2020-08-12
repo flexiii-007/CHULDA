@@ -1,0 +1,124 @@
+*{
+    padding-left: 0;
+    margin: 0;
+} 
+section{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background: rgb(32, 32, 32);
+}
+.profile .main-logo{
+    display: grid;
+    justify-content: center;
+    margin-top: 2em;
+}
+.profile .profile-pic{
+    background: #FFBD00;
+    width: 8em;
+    height: 8em;
+    border-radius: 50%;
+    
+    margin: 3em auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* start chat box */
+
+.chat-box{
+    background: url(../img/d-.jpg);
+    
+    border-radius: 52px 0px 0px 52px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh; 
+    width: 100%; 
+}
+
+.chat-box nav{
+    margin: auto;
+    margin-top: 1.5em;
+    border-radius: 30px;
+    background: rgba(33, 33, 33, 0.5);
+    width: 70%;
+    height: 3em;
+}
+.chat-box nav .exit-icon {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 6px ;
+    padding-right: 8px;
+    
+}
+.chat-box nav .exit-icon img{
+    transition:  ease-out .3s;
+}
+ .chat-box nav .exit-icon img:hover{
+    transform: scale(1.2);
+} 
+.chat-box nav .exit-icon img:active{
+    transform: scale(1);
+}
+.chat-box .exit-icon:hover{
+  color: #FFBD00;
+}
+.chat-box .footer-box{
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 30px 40px ;
+}
+
+.chat-box input{
+    position: relative;
+    color: white;
+    background: none;
+    border: solid 1px #FFBD00;
+    border-radius: 2em;
+    padding-left: 1em;
+    width: 50em;
+    height: 3em;
+    font-family: 'Mulish', sans-serif;
+    outline: none;
+}
+
+.chat-box button{
+    background: #FFBD00;
+    border: none;
+    border-radius: 2em;
+    width: 6em;
+    height: 3em;
+    margin-left: 2em;
+    outline: none;
+    transition:  ease-out .3s;
+    font-family: 'Mulish', sans-serif;
+}
+.chat-box button:hover{
+    background: none;
+    
+    border: solid 1px #FFBD00 ;
+    color: white;
+}
+.chat-box button:active{
+    transform: scale(.9);
+}
+
+::placeholder{
+    color: white;
+    opacity: .6;
+}
